@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------
+   Core Theme Variables
+--------------------------------------------------- */
+
+:root {
+  /* Base */
+  --sm-bg: #ffffff;
+  --sm-fg: #171717;
+
+  /* Brand Colors (adjust as you want) */
+  --sm-brand-50: #eff6ff;
+  --sm-brand-100: #dbeafe;
+  --sm-brand-200: #bfdbfe;
+  --sm-brand-300: #93c5fd;
+  --sm-brand-400: #60a5fa;
+  --sm-brand-500: #3b82f6;
+  --sm-brand-600: #2563eb;
+  --sm-brand-700: #1d4ed8;
+  --sm-brand-800: #1e40af;
+  --sm-brand-900: #1e3a8a;
+
+  /* Grays */
+  --sm-gray-50: #f9fafb;
+  --sm-gray-100: #f3f4f6;
+  --sm-gray-200: #e5e7eb;
+  --sm-gray-300: #d1d5db;
+  --sm-gray-400: #9ca3af;
+  --sm-gray-500: #6b7280;
+  --sm-gray-600: #4b5563;
+  --sm-gray-700: #374151;
+  --sm-gray-800: #1f2937;
+  --sm-gray-900: #111827;
+
+  /* Radii */
+  --sm-radius-sm: 0.25rem;
+  --sm-radius-md: 0.5rem;
+  --sm-radius-lg: 0.75rem;
+  --sm-radius-xl: 1rem;
+
+  /* Spacing tokens */
+  --sm-space-1: 0.25rem;
+  --sm-space-2: 0.5rem;
+  --sm-space-3: 0.75rem;
+  --sm-space-4: 1rem;
+  --sm-space-6: 1.5rem;
+  --sm-space-8: 2rem;
+
+  /* Shadows */
+  --sm-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --sm-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --sm-shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------
+   Dark Mode
+--------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sm-bg: #0a0a0a;
+    --sm-fg: #ededed;
+
+    --sm-gray-100: #1a1a1a;
+    --sm-gray-200: #262626;
+    --sm-gray-300: #404040;
+    --sm-gray-400: #525252;
+    --sm-gray-500: #737373;
+    --sm-gray-600: #8a8a8a;
+    --sm-gray-700: #a3a3a3;
+    --sm-gray-800: #c7c7c7;
+    --sm-gray-900: #e5e5e5;
+  }
+}
+
+/* ---------------------------------------------------
+   Tailwind Theme Registration
+   These become available as:
+   bg-[color], text-[color], rounded-[token], shadow-[token], spacing utilities, etc.
+--------------------------------------------------- */
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--sm-bg);
+  --color-foreground: var(--sm-fg);
+
+  --color-brand-50: var(--sm-brand-50);
+  --color-brand-100: var(--sm-brand-100);
+  --color-brand-200: var(--sm-brand-200);
+  --color-brand-300: var(--sm-brand-300);
+  --color-brand-400: var(--sm-brand-400);
+  --color-brand-500: var(--sm-brand-500);
+  --color-brand-600: var(--sm-brand-600);
+  --color-brand-700: var(--sm-brand-700);
+  --color-brand-800: var(--sm-brand-800);
+  --color-brand-900: var(--sm-brand-900);
+
+  --color-gray-50: var(--sm-gray-50);
+  --color-gray-100: var(--sm-gray-100);
+  --color-gray-200: var(--sm-gray-200);
+  --color-gray-300: var(--sm-gray-300);
+  --color-gray-400: var(--sm-gray-400);
+  --color-gray-500: var(--sm-gray-500);
+  --color-gray-600: var(--sm-gray-600);
+  --color-gray-700: var(--sm-gray-700);
+  --color-gray-800: var(--sm-gray-800);
+  --color-gray-900: var(--sm-gray-900);
+
+  /* Radii */
+  --radius-sm: var(--sm-radius-sm);
+  --radius-md: var(--sm-radius-md);
+  --radius-lg: var(--sm-radius-lg);
+  --radius-xl: var(--sm-radius-xl);
+
+  /* Shadows */
+  --shadow-sm: var(--sm-shadow-sm);
+  --shadow-md: var(--sm-shadow-md);
+  --shadow-lg: var(--sm-shadow-lg);
+
+  /* Spacing */
+  --spacing-1: var(--sm-space-1);
+  --spacing-2: var(--sm-space-2);
+  --spacing-3: var(--sm-space-3);
+  --spacing-4: var(--sm-space-4);
+  --spacing-6: var(--sm-space-6);
+  --spacing-8: var(--sm-space-8);
+
+  /* Fonts — connect external injected fonts or system fonts */
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui);
+  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
+}
+
+/* ---------------------------------------------------
+   Base Reset for Module
+--------------------------------------------------- */
+
+.seating-module {
+  background: var(--sm-bg);
+  color: var(--sm-fg);
+  font-family: var(--font-sans);
+}
+
+.seating-module button,
+.seating-module input,
+.seating-module select {
+  font-family: inherit;
+}
